@@ -20,7 +20,17 @@ public final class R {
         public static final int lijstw=0x7f020006;
     }
     public static final class id {
+        public static final int header=0x7f050001;
+        public static final int ip=0x7f050004;
+        public static final int ipveld=0x7f050008;
         public static final int laag=0x7f050000;
+        public static final int naam=0x7f050003;
+        public static final int naamveld=0x7f050007;
+        public static final int poort=0x7f050002;
+        public static final int poortveld=0x7f050009;
+        public static final int startknop=0x7f050006;
+        public static final int vraag=0x7f050005;
+        public static final int vraagveld=0x7f05000a;
     }
     public static final class layout {
         public static final int gevlo=0x7f030000;

@@ -1,16 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/laag"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-  
-  <!-- Screen Design for Photos -->
-  <TextView android:text="Gegevens hier!"
-  			android:padding="15dip"
-  			android:textSize="18sp"
-  			android:layout_width="fill_parent"
-  			android:layout_height="wrap_content"/>
-   
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/laag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#63B8FF" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="15dip"
+        android:text="Gegevens hier!"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/poort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/naam"
+        android:layout_below="@+id/ip"
+        android:layout_marginTop="18dp"
+        android:text="Poort: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/poort"
+        android:layout_below="@+id/naam"
+        android:layout_marginTop="20dp"
+        android:text="IP: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/naam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="14dp"
+        android:text="Naam: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/vraag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/poort"
+        android:layout_below="@+id/poort"
+        android:layout_marginTop="16dp"
+        android:text="Vraag: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/startknop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Verstuur"
+        android:textColor="#000000"
+        android:background="#ff0000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/naamveld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/naam"
+        android:layout_alignBottom="@+id/naam"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/vraag"
+        android:ems="10" >
+        
+        <requestFocus />
+        </EditText>
+
+    <EditText
+        android:id="@+id/ipveld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/naamveld"
+        android:layout_alignTop="@+id/ip"
+        android:ems="10" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/poortveld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ipveld"
+        android:layout_below="@+id/ipveld"
+        android:ems="10" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/vraagveld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/poortveld"
+        android:layout_alignTop="@+id/vraag"
+        android:ems="10" />
+
+</RelativeLayout>
