@@ -5,10 +5,14 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector.OnGestureListener;
+import android.view.View.OnClickListener;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+
 // import android.widget.Toast; debug
 
 //Main klasse van mijn app, hier worden de tabs aangemaakt en toegevoegd aan Tabhost
@@ -21,6 +25,7 @@ public class MainActivity extends TabActivity implements OnGestureListener
     private static final int SWIPE_LIMIET = 200;
     private TabHost tabHost;
     private TabSpec gevspec;
+    private GegevensActivity ga;
 	
 	//Opstart, wordt aangeroepen als gebruiker app start
     @Override
@@ -48,6 +53,15 @@ public class MainActivity extends TabActivity implements OnGestureListener
         // Adding all TabSpec to TabHost
         tabHost.addTab(gevspec); // Adding photos tab
         tabHost.addTab(lijstspec); // Adding songs tab
+        
+        Button verstuurButton = (Button)this.findViewById(R.id.startknop);
+        verstuurButton.setOnClickListener(new OnClickListener() {
+
+    	public void onClick(View arg0) {
+    		ga.verstuur();
+    		tabHost.setCurrentTab(1);
+    	}
+        });
         
     }
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#63B8FF" >
+    android:background="#ff8c69" >
 
     <TextView
         android:id="@+id/header"
@@ -61,17 +61,6 @@
         android:textColor="#000000"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/startknop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Verstuur"
-        android:textColor="#000000"
-        android:background="#ff0000"
-        android:textSize="18sp" />
-
     <EditText
         android:id="@+id/naamveld"
         android:layout_width="wrap_content"
@@ -110,5 +99,17 @@
         android:layout_alignLeft="@+id/poortveld"
         android:layout_alignTop="@+id/vraag"
         android:ems="10" />
+
+    <Button
+        android:id="@+id/startknop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vraagveld"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:background="#836fff"
+        android:text="Verstuur"
+        android:textColor="#000000"
+        android:textSize="18sp" />
 
 </RelativeLayout>
